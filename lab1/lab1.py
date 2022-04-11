@@ -29,11 +29,11 @@ def own_filter2D(image, kernel):
 
 def processImage(image):
     image = cv2.imread(image) 
-    image = cv2.cvtColor(src=image, code=cv2.COLOR_BGR2GRAY) 
+    image = cv2.cvtColor(src=image, code=cv2.COLOR_BGR2GRAY)
     return image
 
-image_name = 'not_detailed_low_contrast'
-image = processImage(f'pre_images/{image_name}.jpg')
+image_name = 'detailed'
+image = processImage(f'images/{image_name}.jpg')
 
 for kernel_name, kernel in kernels.items():
     output = own_filter2D(image, kernel)
